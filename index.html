@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Finance Tracker</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Personal Finance Tracker</h1>
+  </header>
+  <main>
+    <section id="dashboard">
+      <h2>Dashboard</h2>
+      <div class="stats">
+        <div class="card">Total Income: <span id="total-income">₹0</span></div>
+        <div class="card">Total Expenses: <span id="total-expenses">₹0</span></div>
+        <div class="card">Balance: <span id="remaining-budget">₹0</span></div>
+      </div>
+      <div class="chart-container">
+        <canvas id="spending-trends-chart"></canvas>
+      </div>
+    </section>
+
+    <section id="add-data">
+      <h2>Add Data</h2>
+      <div class="form-container">
+        <form id="expense-form">
+          <h3>Add Expense</h3>
+          <input type="text" id="expense-category" placeholder="Category" required>
+          <input type="number" id="expense-amount" placeholder="Amount" required>
+          <input type="date" id="expense-date" required>
+          <textarea id="expense-description" placeholder="Description (optional)"></textarea>
+          <button type="submit">+ Add Expense</button>
+        </form>
+
+        <form id="income-form">
+          <h3>Add Income</h3>
+          <input type="text" id="income-source" placeholder="Source" required>
+          <input type="number" id="income-amount" placeholder="Amount" required>
+          <input type="date" id="income-date" requireopend>
+          <button type="submit">+ Add Income</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
